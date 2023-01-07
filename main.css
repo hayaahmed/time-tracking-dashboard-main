@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    background-color: hsl(226, 43%, 10%);
+}
+
+.time-tracking {
+    width: 660px;
+    align-items: center;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    gap: 20px;
+    /* grid-template-rows: 350px repeat(2, 150px); */
+}
+
+.time-tracking .jer-div {
+    grid-row: 1/3;
+    height: 380px;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 0 0 10px 10px;
+}
+
+.time-tracking .jer-div .info {
+    background-color: hsl(246, 80%, 60%);
+    height: 250px;
+    border-radius: 10px;
+    color: white;
+    display: block;
+    position: relative;
+}
+
+.time-tracking div {
+    overflow: hidden;
+}
+
+.jer-div .info img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 25px;
+    display: block;
+
+}
+
+.jer-div .info span {
+    color: rgb(208, 205, 205);
+    font-size: 10px;
+    position: absolute;
+    top: 95px;
+    left: 25px;
+}
+
+.jer-div .info h2 {
+    position: absolute;
+    color: white;
+    left: 25px;
+    top: 110px;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.jer-div .times {}
+
+.jer-div .daily {
+    margin-top: 20px;
+}
+
+.jer-div .daily,
+.jer-div .weekly,
+.jer-div .monthly {
+    display: block;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.447);
+    cursor: pointer;
+
+}
+
+.jer-div .daily:hover,
+.jer-div .weekly:hover,
+.jer-div .monthly:hover {
+    color: rgba(255, 255, 255, 0.94);
+
+}
+
+.jer-div .daily.pressed,
+.jer-div .weekly.pressed,
+.jer-div .monthly.pressed {
+    color: rgba(255, 255, 255, 0.94);
+}
+
+.time-tracking .work,
+.play,
+.study,
+.exersize,
+.social,
+.self-care {
+    border-radius: 10px;
+    height: 180px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+.work {
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+    background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+    background-color: hsl(348, 100%, 68%);
+}
+
+.exersize {
+    background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+    background-color: hsl(264, 64%, 52%);
+}
+
+.self-care {
+    background-color: hsl(43, 84%, 65%);
+}
+
+.time-tracking div .icon {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -5px;
+    overflow: hidden;
+    right: 9px;
+    z-index: 2;
+
+}
+
+.time-tracking div .icon img {
+    max-width: 100%;
+
+}
+
+.w-info,
+.p-info,
+.s-info,
+.e-info,
+.so-info,
+.care-info {
+    margin-top: 40px;
+    background-color: hsl(235, 46%, 20%);
+    height: 142px;
+    position: relative;
+    border-radius: 10px;
+    z-index: 2;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.time-tracking .work:hover .w-info,
+.play:hover .p-info,
+.study:hover .s-info,
+.exersize:hover .e-info,
+.social:hover .so-info,
+.self-care:hover .care-info {
+    background-color: hsl(236, 45%, 26%);
+}
+
+.time-tracking div .title {
+    font-size: 18px;
+    margin: 20px;
+    padding-top: 10px;
+    color: white;
+    position: relative;
+}
+
+.w-info .title img,
+.play .p-info .title img,
+.study .s-info .title img,
+.exersize .e-info .title img,
+.social .so-info .title img,
+.self-care .care-info .title img {
+    position: absolute;
+    left: 90px;
+    top: 20px;
+}
+
+.title img.eclip:hover {
+    color: white;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.hours {
+    display: block;
+    margin-left: 20px;
+    font-size: 35px;
+    font-weight: 300;
+    color: white;
+}
+
+.p-hours {
+    font-size: 12px;
+    color: rgb(221, 221, 221);
+    margin-left: 20px;
+    color: rgb(208, 205, 205);
+}
+
+@media (max-width:768px) {
+    .time-tracking {
+        width: 375px;
+        margin-top: 60px;
+        margin-left: 20px;
+        margin-right: 15px;
+        display: grid;
+        grid-template-columns: repeat(1, 335px);
+        gap: 20px;
+    }
+
+    .time-tracking .jer-div {
+        grid-row: 1/2;
+        height: 200px;
+        background-color: hsl(235, 46%, 20%);
+        border-radius: 0 0 10px 10px;
+    }
+
+
+    .time-tracking .jer-div .info {
+        height: 130px;
+
+    }
+
+    .jer-div .info img {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid white;
+        top: 20px;
+        left: 20px;
+        margin-bottom: 25px;
+    }
+
+    .jer-div .info span {
+        color: rgb(208, 205, 205);
+        font-size: 15px;
+        position: absolute;
+        top: 30px;
+        left: 100px;
+    }
+
+    .jer-div .info h2 {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.742);
+        left: 100px;
+        top: 50px;
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+    .jer-div .daily,
+    .jer-div .weekly,
+    .jer-div .monthly {
+        display: inline-block;
+        font-size: 18px;
+        margin-top: 30px;
+        margin-left: 40px;
+        color: rgba(255, 255, 255, 0.447);
+        cursor: pointer;
+
+    }
+
+    .time-tracking div .icon {
+        width: 70px;
+        height: 70px;
+        z-index: 2;
+
+    }
+
+    .work .w-info,
+    .p-info,
+    .s-info,
+    .e-info,
+    .so-info,
+    .care-info {
+        margin-top: 40px;
+        background-color: hsl(235, 46%, 20%);
+        height: 142px;
+        border-radius: 10px;
+        z-index: 2;
+    }
+
+    .work .w-info .title,
+    .play .p-info .title,
+    .study .s-info .title,
+    .exersize .e-info .title,
+    .social .so-info .title,
+    .self-care .care-info .title {
+        font-size: 18px;
+        margin: 20px;
+        padding-top: 10px;
+        color: white;
+        position: relative;
+    }
+
+    .w-info .title img,
+    .play .p-info .title img,
+    .study .s-info .title img,
+    .exersize .e-info .title img,
+    .social .so-info .title img,
+    .self-care .care-info .title img {
+        position: absolute;
+        left: 260px;
+        top: 20px;
+    }
+
+    .hours {
+        display: inline-block;
+        font-weight: 300;
+    }
+
+    .p-hours {
+        display: inline-block;
+        font-size: 15px;
+        margin-left: 60px;
+    }
+
+}
